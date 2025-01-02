@@ -1,4 +1,4 @@
-## The Great Divide: Understanding Virtual Machines and Containers in Modern Infrastructure
+## Understanding Virtual Machines and Containers in Modern Infrastructure
 
 As businesses modernize and embrace cloud-native architectures, one of the biggest challenges they face is how to migrate from virtual machines (VMs) to containers. Initial excitement is met with frustration as teams encounter challenges, setbacks, as the true scope and complexity of the task become apparent. With that said, I want to address the three most common questions and concerns that I see arise.
 
@@ -30,6 +30,10 @@ The key to a successful migration is thorough planning. With that said, there ar
 
 ### 3. How can we ensure there is no disruption for our customers and mitigate the impact to our new feature roadmap?
 
-The key here is to start with a phased migration plan to minimizes disruption. Start by carefully considering where there is an intersection between services that offer a high return for the migration effort with ones that are also stable and less critical. One you have that identified you can then decide on your deployment strategy which will of course dictate your rollback plan to mitigate unforeseen issues. 
+The key here is to start with a phased migration plan to minimizes disruption. Start by carefully considering where there is an intersection between services that offer a high return for the migration effort with ones that are also stable and less critical. One you have that identified you can then decide on your deployment strategy which will of course dictate your rollback plan to mitigate unforeseen issues.
 
-Finally, while it's beyond the scope of this post, it's vital to understand that there are also numerous ways to gradually plan a rollout versus opting for all at once. If you choose the latter which can be successful even for larger services, I've seen this work best with meticulous DNS cut overs and a first pass that cuts down each records TTL (time to live). This time to live is important because it specifies the duration (in seconds) that a DNS resolver (like your computer or internet service provider) should cache a specific DNS record before refreshing it.
+Finally, while it's beyond the scope of this post, it's vital to understand that there are also numerous ways to gradually plan a rollout versus opting for an all at once approach.
+
+To gradually transition traffic from your existing application to a new application running containers in the cloud, you can plan for a canary release. This is done by deploying an API gateway or load balancer that allows for gradual traffic shifting, where you can start by directing a small percentage of traffic to the GKE application and increase it over time as confidence in the new system grows.
+
+If you choose the latter which can be successful even for larger services, I've seen this work best with meticulous DNS cut overs and a first pass that cuts down each records TTL (time to live). This time to live is important because it specifies the duration (in seconds) that a DNS resolver (like your computer or internet service provider) should cache a specific DNS record before refreshing it.
