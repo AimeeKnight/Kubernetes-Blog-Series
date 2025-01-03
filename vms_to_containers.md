@@ -10,7 +10,7 @@ The evolution from VMs to containers represents a significant change in how appl
 
 The key to a successful migration is thorough planning. With that said, there are typically three options customers consider for the migration strategy.
 
-#### 1. Lift and Shift
+### 1. Lift and Shift
 
 - Description: Move applications directly from VMs into containers without modifications.
 - Advantages: Quick and simple.
