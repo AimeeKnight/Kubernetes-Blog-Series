@@ -1,97 +1,27 @@
 ### The Great Divide: Understanding Virtual Machines and Containers in Modern Infrastructure
 
-As businesses modernize and embrace cloud-native architectures, one of the biggest challenges they face is how to migrate core business applications from virtual machines (VMs) to containers. This process can seem daunting, as it often involves balancing technical innovation with business continuity, cost efficiency, and strategic goals. Let’s address some of the most common concerns and questions stakeholders typically have when considering this shift.
+As businesses modernize and embrace cloud-native architectures, one of the biggest challenges they face is how to migrate from virtual machines (VMs) to containers. Initial excitement is met with frustration as teams encounter challenges, setbacks, as the true scope and complexity of the task become apparent. With that said, I want to address the three most common questions and concerns that I see arise.
 
-Why Migrate to Containers?
+1. I keep hearing that migrating to containers will save me money but what does this actually look like in practice? 
 
-The evolution from VMs to containers represents a significant leap in how applications are managed and deployed. Unlike VMs, which require separate operating systems for each instance, containers share the underlying OS and kernel. This enables a single OS environment to support multiple containers, streamlining resource utilization and enabling faster deployment cycles.
+The evolution from VMs to containers represents a significant change in how applications are managed and deployed. Unlike VMs, which require separate operating systems for each instance, containers share the underlying OS and kernel. This enables a single operating system to support multiple containers, which allow for more fine grained resource allocation compared to VMs. You can easily define resource limits (CPU, memory) for each container, and be confident that resources are efficiently distributed among applications. Containers also have a much smaller footprint than VMs, which means you can run a higher number of applications on the same hardware. This translates to better server utilization and reduced infrastructure costs.
 
-For enterprises focused on scalability, agility, and cost optimization, containers offer clear advantages. They align well with cloud-native practices, enhance application performance, and simplify scaling while reducing overhead. However, stakeholders must carefully evaluate their migration strategy to ensure alignment with business objectives.
+2. How is a migration possible if my application wasn't built to run on containers?
 
-Key Concerns and How to Address Them
+The key to a successful migration is thorough planning. With that said, there are typically three options customers consider for the migration strategy. 
+1. Lift and Shift
+	1. Description: Move applications directly from VMs into containers without modifications.
+	2. Advantages: Quick and simple.
+	3. Drawbacks: Limited benefits as it doesn’t optimize for container-native performance.
+2. Refactoring
+	1. Description: Modify the application’s code and structure without altering its core functionality.
+	2. Advantages: Enhances scalability and maintainability while leveraging container features.
+	3. Drawbacks: Requires more meticulous effort and architecture knowledge compared to lift and shift.
+3. Rearchitecting
+	1. Description: Fully redesign the application to adopt a micro services architecture.
+	2. Advantages: Maximizes the benefits of containers and the container-native ecosystem.
+	3. Drawbacks: Time-intensive and requires substantial expertise in the current architecture along with it's dependencies.
 
-1. Cost and Financial Impact
+3. How can we ensure there is no disruption for our customers and mitigate the impact to our new feature roadmap?
 
-Stakeholder Concern: What are the costs and potential savings of migration?
-
-Solution: A migration to containers can lead to significant cost savings in infrastructure and licensing. However, upfront investments may include training, tools, and possible refactoring efforts. Start with a cost-benefit analysis, clearly outlining the long-term savings in resource utilization, licensing fees, and reduced downtime compared to VMs.
-
-2. Business Continuity and Risk Management
-
-Stakeholder Concern: Will the migration disrupt operations or introduce risks?
-
-Solution: A phased migration plan minimizes disruption. Start with stable, less critical applications before addressing complex workloads. Use tools like Kubernetes for orchestration and implement robust testing frameworks to ensure reliability. Always have a rollback plan to mitigate unforeseen challenges.
-
-3. Performance and Scalability
-
-Stakeholder Concern: Will containers improve application performance?
-
-Solution: Containers are lightweight and designed for efficient resource use. Applications running in containers typically perform better due to reduced overhead compared to VMs. Additionally, containers simplify horizontal scaling, enabling enterprises to handle traffic spikes with ease.
-
-4. Security and Compliance
-
-Stakeholder Concern: How secure and compliant is a container-based environment?
-
-Solution: Leverage tools like image scanning and runtime monitoring to secure containers. Use solutions such as Kubernetes secrets and integrate with GCP Secret Manager or Vault for secure credential management. Work closely with compliance teams to ensure adherence to industry standards like GDPR or HIPAA.
-
-5. Operational Changes
-
-Stakeholder Concern: How will day-to-day operations change?
-
-Solution: Transitioning to containers often involves adopting new tools and workflows. Training existing teams on container management and orchestration tools like Kubernetes is critical. Automation and CI/CD pipelines will play a larger role, enhancing operational efficiency.
-
-6. Integration and Compatibility
-
-Stakeholder Concern: Will existing applications work in containers?
-
-Solution: Evaluate each application’s compatibility. For simpler workloads, a “lift and shift” approach—moving the application directly into a container—may suffice. For more complex applications, refactoring or rearchitecting might be necessary to fully leverage containerization’s benefits.
-
-7. Time to Value
-
-Stakeholder Concern: How long will the migration take, and when will we see ROI?
-
-Solution: ROI depends on the chosen migration approach. A “lift and shift” method delivers faster results but may not unlock the full potential of containers. Refactoring and rearchitecting take longer but offer greater scalability and performance gains over time.
-
-8. Vendor Lock-in
-
-Stakeholder Concern: Will we be tied to specific tools or platforms?
-
-Solution: Containers are inherently portable, making it easier to run workloads across multiple environments, whether on-premises or in the cloud. Choosing open-source orchestration tools like Kubernetes helps mitigate vendor lock-in.
-
-9. Support and Ecosystem
-
-Stakeholder Concern: Is there sufficient support for container adoption?
-
-Solution: The container ecosystem has matured significantly, offering a wealth of tools and best practices. Work with experienced partners or cloud providers who offer managed Kubernetes solutions and extensive support for containerized workloads.
-
-Migration Strategies: Choosing the Right Approach
-
-Migrating from VMs to containers involves several pathways, each with its trade-offs:
-
-Lift and Shift
-
-Description: Move applications directly from VMs into containers without modifications.
-
-Advantages: Quick and simple.
-
-Drawbacks: Limited benefits as it doesn’t optimize for container-native performance.
-
-Refactoring
-
-Description: Modify the application’s code and structure without altering its core functionality.
-
-Advantages: Enhances scalability and maintainability while leveraging container features.
-
-Drawbacks: Requires more effort and resources compared to lift and shift.
-
-Rearchitecting
-
-Description: Fully redesign the application to adopt a microservices architecture.
-
-Advantages: Maximizes the benefits of containers, delivering superior agility and control.
-
-Drawbacks: Time-intensive and requires substantial expertise.
-
-Conclusion
-
-Migrating to containers is a transformative step for enterprises, offering improved scalability, cost-efficiency, and agility. By addressing stakeholders’ concerns and choosing the right migration strategy, businesses can mitigate risks and unlock the full potential of a container-based environment. With careful planning and support, even existing teams can navigate this transition successfully, positioning the organization for a cloud-native future.
+The key here is to start with a phased migration plan to minimizes disruption. Start by carefully considering where there is an intersection between services that offer a high return for the migration effort with ones that are also stable and less critical. Finally, always have a rollback plan to mitigate unforeseen challenges. In practice I've seen this work best with meticulous DNS cutovers and a first pass that cuts down each records TTL (time to live). This time to live is important because it specifies the duration (in seconds) that a DNS resolver (like your computer or internet service provider) should cache a specific DNS record before refreshing it.
