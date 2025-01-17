@@ -2,6 +2,7 @@
 
 ![Last Commit](https://img.shields.io/github/last-commit/AimeeKnight/Kubernetes-Blog-Series)
 ![Contributors](https://img.shields.io/github/contributors/AimeeKnight/Kubernetes-Blog-Series)
+![Commit Count](https://img.shields.io/github/commit-activity/y/AimeeKnight/Kubernetes-Blog-Series)
 [![Documentation](https://img.shields.io/badge/docs-website-blue.svg)](https://AimeeKnight.github.io/Kubernetes-Blog-Series/)
 
 ## Modern Infrastructure: From Traditional Deployments to Cloud-Native Architecture
