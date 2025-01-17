@@ -1,5 +1,8 @@
 # From Pets to Cattle: Embracing Immutable Infrastructure in the Cloud Era
 
+![Cattle Server](images/cattle-server.jpg)
+
+
 ## The Rise of the "Cattle" Model
 
 The shift to cloud computing has fundamentally changed how we manage infrastructure and even how we measure success.  Where "uptime" was once the gold standard, signifying the continuous operation of individual servers, the cloud era prioritizes "availability." This reflects a move from the "pet" model of meticulously maintaining individual servers to the "cattle" model of treating them as interchangeable units within a vast herd.  This transition marks the rise of immutable infrastructure, where servers are replaced rather than modified, eliminating configuration drift and maximizing availability. Imagine a farm where a sick cow is simply replaced with a healthy one from the herd – that's the essence of immutability and the key to maintaining continuous service. 
