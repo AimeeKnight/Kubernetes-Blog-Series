@@ -1,4 +1,5 @@
 ## Breaking It Down: A Deep Dive into Microservices Architecture
+![segments](images/segments.jpg)
 
 With 75% of companies adopting microservice architectures as of 2025, organizations are increasingly seeking to enhance their systems' resilience, scalability, and maintainability. This trend reflects a growing recognition of the flexibility and efficiency that microservices provide, allowing businesses to adapt quickly to things from changing product requirements to traffic demand and request rates. With that said, the following outlines proven strategies to migrate from a monolithic architecture to microservices.
 
