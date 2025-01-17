@@ -1,4 +1,9 @@
 # Kubernetes-Blog-Series
+
+![Last Commit](https://img.shields.io/github/last-commit/AimeeKnight/Kubernetes-Blog-Series)
+![Contributors](https://img.shields.io/github/contributors/AimeeKnight/Kubernetes-Blog-Series)
+[![Documentation](https://img.shields.io/badge/docs-website-blue.svg)](https://AimeeKnight.github.io/Kubernetes-Blog-Series/)
+
 ## Modern Infrastructure: From Traditional Deployments to Cloud-Native Architecture
 
 ### Learning Steps
@@ -22,4 +27,3 @@
     - Explore tools like Terraform, Ansible, and Kubernetes for defining and managing infrastructure.
     - Understand the principles of version control, repeatability, and scalability in infrastructure management. 
     - Learn about managing infrastructure using code and automation tools.
-   
