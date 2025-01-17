@@ -1,0 +1,48 @@
+name: Documentation CI
+
+on:
+  push:
+    branches:
+      - all
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  lint:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Install markdownlint
+        run: npm install -g markdownlint-cli
+
+      - name: Lint markdown files
+        run: markdownlint '**/*.md'
+
+  spellcheck:
+    runs-on: ubuntu-latest
+    continue-on-error: true
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Install cspell
+        run: npm install -g cspell
+
+      - name: Spell check
+        run: cspell '**/*.md'
+
+  linkcheck:
+    runs-on: ubuntu-latest
+    continue-on-error: true
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Install markdown-link-check
+        run: npm install -g markdown-link-check
+
+      - name: Check links
+        run: markdown-link-check '**/*.md'
