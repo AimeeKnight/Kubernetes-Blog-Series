@@ -1,11 +1,11 @@
 ### "Breaking It Down: A Deep Dive into Microservices Architecture"
 
-With 75% of companies adopting microservice architectures as of 2025, organizations are increasingly seeking to enhance their systems' resilience, scalability, and maintainability. This trend reflects a growing recognition of the flexibility and efficiency that microservices provide, allowing businesses to adapt quickly to changing product and traffic demands. Here's how to effectively migrate from a monolithic architecture to microservices.
+With 75% of companies adopting microservice architectures as of 2025, organizations are increasingly seeking to enhance their systems' resilience, scalability, and maintainability. This trend reflects a growing recognition of the flexibility and efficiency that microservices provide, allowing businesses to adapt quickly to things from changing product requirements to traffic demand and request rates. With that said, the following outlines proven strategies to migrate from a monolithic architecture to microservices.
 
 ## Understanding the Architecture Types
 
 ### Monolithic Architecture
-In monolithic applications, all data objects and actions are handled by a single codebase with a unified database. While historically common, this approach often leads to maintenance issues, scaling difficulties, and complex dependencies.
+In monolithic applications, data and code are usually handled not just by a single codebase but with a unified database as well. While historically common, this approach has all too often proven to lead to lead to complex dependencies which increases scaling costs while creating complicated and high risk deployments.
 
 ### Microservices Architecture
 Microservices break down applications into smaller, independent services, each managing its own data and specific functions. These services communicate through APIs (typically REST, gRPC, or GraphQL) and can be developed using different technologies. Each service maintains data locality, meaning it exclusively manages its own data storage, though the physical storage location can vary based on organizational needs.
