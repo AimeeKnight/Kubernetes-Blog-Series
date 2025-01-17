@@ -3,7 +3,7 @@ name: Documentation CI
 on:
   push:
     branches:
-      - main
+      - all
   pull_request:
     branches:
       - main
