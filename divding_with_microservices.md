@@ -14,7 +14,7 @@ In monolithic applications, data and code are usually handled not just by a sing
 
 ### Microservices Architecture
 
-Microservices break down applications into smaller, independent services, each managing its own data and functionality. These services communicate through APIs (typically REST, gRPC, or GraphQL) and can be developed using independant technologies. Each service maintains data locality, meaning it exclusively manages its own data storage, though the physical storage location can vary based on organizational needs.
+Microservices break down applications into smaller, independent services, each managing its own data and functionality. These services communicate through APIs (typically REST, gRPC, or GraphQL) and can be developed using independent technologies. Each service maintains data locality, meaning it exclusively manages its own data storage, though the physical storage location can vary based on organizational needs.
 
 ## Migration Process
 
