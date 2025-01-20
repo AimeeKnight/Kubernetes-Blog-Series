@@ -1,5 +1,7 @@
 # Understanding Virtual Machines and Containers in Modern Infrastructure
 
+// cSpell:ignore Rearchitecting
+
 As businesses modernize and embrace cloud-native architectures, one of the biggest challenges they face is how to migrate from virtual machines (VMs) to containers. Initial excitement is met with frustration as teams encounter challenges, setbacks, as the true scope and complexity of the task become apparent. With that said, I want to address the three most common questions and concerns that I see arise.
 
 ## 1. I keep hearing that migrating to containers will save me money but what does this actually look like in practice?

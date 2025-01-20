@@ -1,5 +1,7 @@
 # From 3-Tier HTTP Architecture to API-Based Microsegmentation
 
+// cSpell:ignore Microsegmentation
+
 ![API Architecture](images/api.jpg)
 
 ## Introduction

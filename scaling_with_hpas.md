@@ -1,5 +1,7 @@
 # Elastic Operations: Mastering Kubernetes Horizontal Pod Autoscaling
 
+// cSpell:ignore Autoscalers, replicaset, Cooldown
+
 If you're running Kubernetes you really should be using Horizontal Pod Autoscalers (HPAs) too. They work by continuously monitoring the resource usage of a deployment, replicaset, or other scalable resource, and automatically adjusting the number of replicas (pods) based on the defined scaling policies and metrics.
 
 Here's a step-by-step overview of how HPAs work:
