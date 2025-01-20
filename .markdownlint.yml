@@ -13,6 +13,3 @@ MD024:
 
 # MD033/no-inline-html: Inline HTML
 MD033: false
-
-# MD034/no-bare-urls - Bare URL
-MD034: false
