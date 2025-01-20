@@ -1,8 +1,8 @@
-## Understanding Virtual Machines and Containers in Modern Infrastructure
+# Understanding Virtual Machines and Containers in Modern Infrastructure
 
 As businesses modernize and embrace cloud-native architectures, one of the biggest challenges they face is how to migrate from virtual machines (VMs) to containers. Initial excitement is met with frustration as teams encounter challenges, setbacks, as the true scope and complexity of the task become apparent. With that said, I want to address the three most common questions and concerns that I see arise.
 
-### 1. I keep hearing that migrating to containers will save me money but what does this actually look like in practice?
+## 1. I keep hearing that migrating to containers will save me money but what does this actually look like in practice?
 
 The evolution from VMs to containers represents a significant change in how applications are managed and deployed. Unlike VMs, which require separate operating systems for each instance, containers share the underlying OS and kernel. This enables a single operating system to support multiple containers, which allow for more fine grained resource allocation compared to VMs. You can easily define resource limits (CPU, memory) for each container, and be confident that resources are efficiently distributed among applications. Containers also have a much smaller footprint than VMs, which means you can run a higher number of applications on the same hardware. This translates to better server utilization and reduced infrastructure costs.
 
@@ -15,13 +15,13 @@ The key to a successful migration is thorough planning. With that said, there ar
 - Description: Move applications directly from VMs into containers without modifications.
 - Advantages: Quick and simple.
 - Drawbacks: Limited benefits as it doesn’t optimize for container-native performance.
- 
+
 ### 2. Refactoring
 
 - Description: Modify the application’s code and structure without altering its core functionality.
 - Advantages: Enhances scalability and maintainability while leveraging container features.
 - Drawbacks: Requires more meticulous effort and architecture knowledge compared to lift and shift.
- 
+
 ### 3. Rearchitecting
 
 - Description: Fully redesign the application to adopt a micro services architecture.

@@ -1,4 +1,5 @@
 # From 3-Tier HTTP Architecture to API-Based Microsegmentation
+
 ![API Architecture](images/api.jpg)
 
 ## Introduction
@@ -13,13 +14,13 @@ The 3-tier architecture is a well-established model that divides an application 
 2. **Application Layer**: The business logic, usually hosted on a web server.
 3. **Data Layer**: The database server where data is stored and managed.
 
-### Advantages
+### Advantages of 3-Tier HTTP Architecture
 
 - **Simplicity**: Easy to understand and implement.
 - **Separation of Concerns**: Clear division of responsibilities among layers.
 - **Scalability**: Each layer can be scaled independently.
 
-### Disadvantages
+### Disadvantages of 3-Tier HTTP Architecture
 
 - **Monolithic Nature**: Changes in one layer can affect the entire application.
 - **Limited Flexibility**: Difficult to adapt to new technologies and requirements.
@@ -35,14 +36,14 @@ Microsegmentation architecture, often implemented using microservices, breaks do
 2. **APIs**: Interfaces that allow microservices to communicate with each other.
 3. **Service Mesh**: A dedicated infrastructure layer for managing service-to-service communication.
 
-### Advantages
+### Advantages of Microsegmentation Architecture
 
 - **Modularity**: Each microservice can be developed, deployed, and scaled independently.
 - **Flexibility**: Easier to adopt new technologies and update individual services.
 - **Resilience**: Failures in one service do not affect the entire application.
 - **Enhanced Security**: Microsegmentation allows for more granular security controls.
 
-### Disadvantages
+### Disadvantages of Microsegmentation Architecture
 
 - **Complexity**: Managing multiple microservices can be challenging.
 - **Overhead**: Increased communication between services can introduce latency.
