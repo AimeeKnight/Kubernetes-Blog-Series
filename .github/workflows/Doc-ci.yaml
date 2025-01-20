@@ -46,3 +46,5 @@ jobs:
 
       - name: Check links
         run: markdown-link-check
+        with:
+          folder-path: '**/*.md'
