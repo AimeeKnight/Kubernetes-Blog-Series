@@ -2,7 +2,7 @@ name: superlinter- relese the Possum!!
 on:
   push:
     branches:
-      - <your-new-branch-name>
+      - super-linter
   pull_request:
     branches:
       - main
