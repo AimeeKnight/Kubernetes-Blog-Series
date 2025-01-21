@@ -1,4 +1,5 @@
 name: superlinter- release the Possum!!
+
 on:
   push:
     branches:
@@ -10,6 +11,9 @@ on:
 jobs:
   lint:
     runs-on: ubuntu-latest
+    permissions:
+      contents: write
+      statuses: write
     steps:
       - name: Checkout code
         uses: actions/checkout@v2
@@ -19,12 +23,65 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           VALIDATE_MARKDOWN: true
+          VALIDATE_ALL_CODEBASE: false
           DEFAULT_BRANCH: main
           MARKDOWN_LINT_DISABLE_RULES: MD013 # Example to disable a specific rule
           MARKDOWN_LINT_FIX: true # Enable auto-fixing lint issues
-          VALIDATE_ALL_CODEBASE: false # Do not validate the entire codebase
           LINTER_RULES_PATH: .github/linters # Path to custom linter rules
+          # Disable all other linters
+          VALIDATE_ALL_CODEBASE: false
+          VALIDATE_ANSIBLE: false
+          VALIDATE_ARM: false
+          VALIDATE_BASH: false
+          VALIDATE_CLOJURE: false
+          VALIDATE_CMAKE: false
+          VALIDATE_COFFEESCRIPT: false
+          VALIDATE_CSHARP: false
+          VALIDATE_CSS: false
+          VALIDATE_DART: false
+          VALIDATE_DOCKER: false
+          VALIDATE_ENV: false
+          VALIDATE_GO: false
+          VALIDATE_GROOVY: false
+          VALIDATE_HTML: false
+          VALIDATE_JAVA: false
+          VALIDATE_JAVASCRIPT_ES: false
+          VALIDATE_JAVASCRIPT_STANDARD: false
+          VALIDATE_JSON: false
+          VALIDATE_JSCPD: false
+          VALIDATE_KOTLIN: false
+          VALIDATE_LATEX: false
+          VALIDATE_LUA: false
+          VALIDATE_MARKDOWN: true
+          VALIDATE_OPENAPI: false
+          VALIDATE_PERL: false
+          VALIDATE_PHP: false
+          VALIDATE_POWERSHELL: false
+          VALIDATE_PROTOBUF: false
+          VALIDATE_PYTHON: false
+          VALIDATE_R: false
+          VALIDATE_RAKU: false
+          VALIDATE_RUBY: false
+          VALIDATE_RUST: false
+          VALIDATE_SHELL_SHFMT: false
+          VALIDATE_STATES: false
+          VALIDATE_TERRAFORM: false
+          VALIDATE_TSCPD: false
+          VALIDATE_TYPESCRIPT_ES: false
+          VALIDATE_TYPESCRIPT_STANDARD: false
+          VALIDATE_XML: false
+          VALIDATE_YAML: false
 
+      - name: Commit and push linting fixes
+        if: >
+          github.event_name == 'pull_request' &&
+          github.ref_name != github.event.repository.default_branch
+        uses: stefanzweifel/git-auto-commit-action@v5
+        with:
+          branch: ${{ github.event.pull_request.head.ref || github.head_ref || github.ref }}
+          commit_message: "chore: fix linting issues"
+          commit_user_name: super-linter
+          commit_user_email: super-linter@super-linter.dev
 
   fix-lint-issues:
     permissions:
