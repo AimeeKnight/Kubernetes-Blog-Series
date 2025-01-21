@@ -1,0 +1,5 @@
+{
+  "default": true,
+  "MD013": false, // Disable line length rule
+  "MD041": false  // Disable first line heading rule
+}
