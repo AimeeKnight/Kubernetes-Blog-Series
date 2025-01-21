@@ -1,4 +1,6 @@
-### Elastic Operations: Mastering Kubernetes Horizontal Pod Autoscaling
+# Elastic Operations: Mastering Kubernetes Horizontal Pod Autoscaling
+
+// cSpell:ignore Autoscalers, replicaset, Cooldown
 
 If you're running Kubernetes you really should be using Horizontal Pod Autoscalers (HPAs) too. They work by continuously monitoring the resource usage of a deployment, replicaset, or other scalable resource, and automatically adjusting the number of replicas (pods) based on the defined scaling policies and metrics.
 
@@ -22,4 +24,4 @@ Here's a step-by-step overview of how HPAs work:
 
 8. **Cooldown Period**: After a failed scaling attempt (e.g., hitting the maximum replica limit), the HPA enters a cooldown period (controlled by the `--horizontal-pod-autoscaler-cpu-initialization-period` and `--horizontal-pod-autoscaler-initial-readiness-delay` flags) before attempting to scale again. This prevents thrashing and allows for stabilization.
 
-HPAs provide an automated and dynamic way to scale applications in Kubernetes based on their actual resource usage, ensuring efficient resource utilization and meeting application performance requirements. However, it's essential to carefully configure the scaling policies and monitor the HPA's behavior to ensure optimal scaling decisions for your specific workloads. You can check out more details in the official documentation at https://kubernetes.io/docs/tasks/run-application/horizontal-pod-autoscale/.
+HPAs provide an automated and dynamic way to scale applications in Kubernetes based on their actual resource usage, ensuring efficient resource utilization and meeting application performance requirements. However, it's essential to carefully configure the scaling policies and monitor the HPA's behavior to ensure optimal scaling decisions for your specific workloads. You can check out more details in the official documentation at <https://kubernetes.io/docs/tasks/run-application/horizontal-pod-autoscale/>.

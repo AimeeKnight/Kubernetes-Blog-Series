@@ -40,6 +40,8 @@ jobs:
     steps:
       - name: Checkout code
         uses: actions/checkout@v2
+        with:
+          folder-path: '**/*.md'
 
       - name: Install markdown-link-check
         run: npm install -g markdown-link-check
