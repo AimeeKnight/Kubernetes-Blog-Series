@@ -1,4 +1,4 @@
-name: superlinter- release the Possum!!
+name: superlinter-release-the-possum
 
 on:
   push:
@@ -16,17 +16,16 @@ jobs:
       statuses: write
     steps:
       - name: Checkout code
-        uses: actions/checkout@v2
+        uses: actions/checkout@v3
 
       - name: Super-Linter
-        uses: github/super-linter@v4
+        uses: github/super-linter@v5
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          VALIDATE_MARKDOWN: true
           DEFAULT_BRANCH: main
-          MARKDOWN_LINT_DISABLE_RULES: MD013 # Example to disable a specific rule
-          MARKDOWN_LINT_FIX: true # Enable auto-fixing lint issues
           LINTER_RULES_PATH: .github/linters # Path to custom linter rules
+          VALIDATE_MARKDOWN: true
+          MARKDOWN_LINT_FIX: true # Enable auto-fixing lint issues
           # Disable all other linters
           VALIDATE_ANSIBLE: false
           VALIDATE_ARM: false
