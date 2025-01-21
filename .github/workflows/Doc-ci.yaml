@@ -1,4 +1,4 @@
-name: Doc Linting with Super-Linter - Release the Possum!!
+name: Documentation CI
 
 on:
   push:
@@ -15,11 +15,36 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v2
 
-      - name: Run Super-Linter
-        uses: github/super-linter@v4
-        env:
-          VALIDATE_MARKDOWN: true
-          DEFAULT_BRANCH: main
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          MARKDOWN_LINT_DISABLE_RULES: MD013 # Example to disable a specific rule
-          MARKDOWN_LINT_FIX: true # Enable auto-fixing lint issues
+      - name: Install markdownlint
+        run: npm install -g markdownlint-cli
+
+      - name: Lint markdown files
+        run: markdownlint '**/*.md'
+
+  spellcheck:
+    runs-on: ubuntu-latest
+    continue-on-error: true
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Install cspell
+        run: npm install -g cspell
+
+      - name: Spell check
+        run: cspell '**/*.md'
+
+  linkcheck:
+    runs-on: ubuntu-latest
+    continue-on-error: true
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+        with:
+          folder-path: '**/*.md'
+
+      - name: Install markdown-link-check
+        run: npm install -g markdown-link-check
+
+      - name: Check links
+        run: find . -name "*.md" | xargs markdown-link-check

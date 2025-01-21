@@ -1,0 +1,24 @@
+name: superlinter- relese the Possum!!
+on:
+  push:
+    branches:
+      - <your-new-branch-name>
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  lint:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Run Super-Linter
+        uses: github/super-linter@v4
+        env:
+          VALIDATE_MARKDOWN: true
+          DEFAULT_BRANCH: main
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          MARKDOWN_LINT_DISABLE_RULES: MD013 # Example to disable a specific rule
+          MARKDOWN_LINT_FIX: true # Enable auto-fixing lint issues
