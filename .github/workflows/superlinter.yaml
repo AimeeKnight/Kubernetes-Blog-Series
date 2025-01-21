@@ -28,7 +28,6 @@ jobs:
           MARKDOWN_LINT_FIX: true # Enable auto-fixing lint issues
           LINTER_RULES_PATH: .github/linters # Path to custom linter rules
           # Disable all other linters
-          VALIDATE_ALL_CODEBASE: false
           VALIDATE_ANSIBLE: false
           VALIDATE_ARM: false
           VALIDATE_BASH: false
