@@ -5,6 +5,20 @@
 ![Commit Count](https://img.shields.io/github/commit-activity/y/AimeeKnight/Kubernetes-Blog-Series)
 [![Documentation](https://img.shields.io/badge/docs-website-blue.svg)](https://AimeeKnight.github.io/Kubernetes-Blog-Series/)
 
+## Summary
+
+This repository is dedicated to the development of a blog series focused on Kubernetes and modern infrastructure. It covers various topics, including the transition from traditional deployments to cloud-native architecture, microservices, immutable infrastructure, and more.
+
+## Table of Contents
+
+- [Modern Infrastructure: From Traditional Deployments to Cloud-Native Architecture](#modern-infrastructure-from-traditional-deployments-to-cloud-native-architecture)
+  - [Learning Steps](#learning-steps)
+    1. [From HTTP to API](#from-http-to-api)
+    2. [Monolith to Microservice](#monolith-to-microservice)
+    3. [Cattle not Pets](#cattle-not-pets)
+    4. [Infrastructure as Code](#infrastructure-as-code)
+- [Continuous Integration (CI)](#continuous-integration-ci)
+
 ## Modern Infrastructure: From Traditional Deployments to Cloud-Native Architecture
 
 ### Learning Steps
@@ -28,3 +42,21 @@
     - Explore tools like Terraform, Ansible, and Kubernetes for defining and managing infrastructure.
     - Understand the principles of version control, repeatability, and scalability in infrastructure management. 
     - Learn about managing infrastructure using code and automation tools.
+
+## Continuous Integration (CI)
+
+This repository uses GitHub Actions for Continuous Integration (CI) to ensure code quality and consistency. The CI pipeline includes the following checks:
+
+1. **Markdown Linting**
+   - Uses `markdownlint-cli` to lint all Markdown files in the repository.
+   - Ensures that Markdown files adhere to a consistent style and format.
+
+2. **Spell Checking**
+   - Uses `cspell` to check for spelling errors in Markdown files.
+   - Helps maintain the quality and readability of documentation.
+
+3. **Link Checking**
+   - Uses `markdown-link-check` to verify that all links in Markdown files are valid.
+   - Ensures that documentation does not contain broken links.
+
+The CI configuration can be found in the `.github/workflows/Doc-ci.yaml` file.
