@@ -53,14 +53,19 @@ This repository is dedicated to the development of a blog series focused on Kube
     - Learn about managing infrastructure using code and automation tools.
 
 ## Understanding K8s
-1. [Containers 101](#containers-101)
-2. [Kubernetes Architecture](#kubernetes-architecture)
+1. [Containers 101](containers_101.md)
+   - Introduction to container technology, its benefits, and how it differs from traditional virtualization.
+   - Learn about Docker, container lifecycle, and basic commands.
+
+2. [Kubernetes Architecture](Kubernetes_arch.md)
+   - Detailed overview of Kubernetes architecture and its components.
+   - Understand the roles of the master node, worker nodes, and key concepts like pods, services, and deployments.
 
 ## Using K8s in the Real World
 1. [Scaling with HPAs](#scaling-with-hpas)
 
 ## Reference
-1. [Lexicon](#lexicon)
+1. [Lexicon](K8s_lexicon.md)
 
 ### Repository Information
 
