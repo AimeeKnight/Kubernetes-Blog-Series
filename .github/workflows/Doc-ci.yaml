@@ -6,7 +6,7 @@ on:
       - all
   pull_request:
     branches:
-      - main
+      - all
 
 jobs:
   lint:

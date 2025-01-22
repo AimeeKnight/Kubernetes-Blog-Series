@@ -65,7 +65,7 @@ This repository is dedicated to the development of a blog series focused on Kube
    - Learn about Horizontal Pod Autoscalers (HPAs) and how they help in scaling applications dynamically.
 
 ## Reference
-1. [**Lexicon**](content/reference/k8s_lexicon.md)
+1. [**Lexicon**](content/reference/K8s_Lexicon.md)
    - A glossary of terms and concepts related to Kubernetes and cloud-native infrastructure.
 
 ## Continuous Integration (CI)
