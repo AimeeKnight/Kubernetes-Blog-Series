@@ -1,6 +1,5 @@
 # Kubernetes-Blog-Series
 
-
 ![Last Commit](https://img.shields.io/github/last-commit/AimeeKnight/Kubernetes-Blog-Series)
 ![Contributors](https://img.shields.io/github/contributors/AimeeKnight/Kubernetes-Blog-Series)
 ![Commit Count](https://img.shields.io/github/commit-activity/y/AimeeKnight/Kubernetes-Blog-Series)
