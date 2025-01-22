@@ -5,9 +5,14 @@
 ![Commit Count](https://img.shields.io/github/commit-activity/y/AimeeKnight/Kubernetes-Blog-Series)
 [![Documentation](https://img.shields.io/badge/docs-website-blue.svg)](https://AimeeKnight.github.io/Kubernetes-Blog-Series/)
 
+
+
 ## Summary
 
 This repository is dedicated to the development of a blog series focused on Kubernetes and modern infrastructure. It covers various topics, including the transition from traditional deployments to cloud-native architecture, microservices, immutable infrastructure, and more.
+
+![Kubernetes Logo](https://raw.githubusercontent.com/kubernetes/kubernetes/master/logo/logo.png)
+![CNCF Badge](https://img.shields.io/badge/CNCF-Kubernetes-blue)
 
 ## Table of Contents
 
