@@ -1,0 +1,27 @@
+{
+    "version": "0.2",
+    "language": "en",
+    "words": [
+      "Kubernetes",
+      "kubelet",
+      "Containerd",
+      "k8s",
+      "microservices",
+      "Terraform",
+      "Ansible",
+      "CI",
+      "CD",
+      "API",
+      "REST",
+      "gRPC",
+      "GraphQL",
+      "Docker",
+      "HPA",
+      "HPAs"
+    ],
+    "ignorePaths": [
+      "node_modules/**",
+      "dist/**",
+      "build/**"
+    ]
+  }
