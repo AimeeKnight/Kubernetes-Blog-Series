@@ -11,17 +11,21 @@ This repository is dedicated to the development of a blog series focused on Kube
 
 ## Table of Contents
 
-- [Modern Infrastructure: From Traditional Deployments to Cloud-Native Architecture](#modern-infrastructure-from-traditional-deployments-to-cloud-native-architecture)
-  - [Learning Steps](#learning-steps)
-    1. [From HTTP to API](#from-http-to-api)
-    2. [Monolith to Microservice](#monolith-to-microservice)
-    3. [Cattle not Pets](#cattle-not-pets)
-    4. [Infrastructure as Code](#infrastructure-as-code)
-- [Continuous Integration (CI)](#continuous-integration-ci)
+- [Intro](#intro)
+  1. [From HTTP to API](#from-http-to-api)
+  2. [Monolith to Microservice](#monolith-to-microservice)
+  3. [Cattle not Pets](#cattle-not-pets)
+  4. [Infrastructure as Code](#infrastructure-as-code)
+  5. [Continuous Integration (CI)](#continuous-integration-ci)
+- [Understanding K8s](#understanding-k8s)
+  1. [Containers 101](#containers-101)
+  2. [Kubernetes Architecture](#kubernetes-architecture)
+- [Using K8s in the Real World](#using-k8s-in-the-real-world)
+  1. [Scaling with HPAs](#scaling-with-hpas)
+- [Reference](#reference)
+  1. [Lexicon](#lexicon)
 
-## Modern Infrastructure: From Traditional Deployments to Cloud-Native Architecture
-
-### Learning Steps
+### Introduction
 
 1. **From HTTP to API**
    - Understand the transition from traditional HTTP-based services to modern API-driven architectures.
@@ -42,6 +46,18 @@ This repository is dedicated to the development of a blog series focused on Kube
     - Explore tools like Terraform, Ansible, and Kubernetes for defining and managing infrastructure.
     - Understand the principles of version control, repeatability, and scalability in infrastructure management.
     - Learn about managing infrastructure using code and automation tools.
+
+## Understanding K8s
+1. [Containers 101](#containers-101)
+2. [Kubernetes Architecture](#kubernetes-architecture)
+
+## Using K8s in the Real World
+1. [Scaling with HPAs](#scaling-with-hpas)
+
+## Reference
+1. [Lexicon](#lexicon)
+
+### Repository Information
 
 ## Continuous Integration (CI)
 
