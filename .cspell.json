@@ -9,6 +9,7 @@
       "microservices",
       "Terraform",
       "Ansible",
+      "Autoscaler",
       "CI",
       "CD",
       "API",
