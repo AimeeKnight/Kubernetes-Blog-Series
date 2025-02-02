@@ -51,6 +51,7 @@ This repository is dedicated to the development of a blog series focused on Kube
    - Learn about CI practices and tools to automate testing and deployment.
 
 ## Understanding K8s
+
 1. [**Containers 101**](content/understanding_k8s/containers_101.md)
    - Introduction to container technology, its benefits, and how it differs from traditional virtualization.
    - Learn about Docker, container lifecycle, and basic commands.
@@ -60,10 +61,12 @@ This repository is dedicated to the development of a blog series focused on Kube
    - Understand the roles of the master node, worker nodes, and key concepts like pods, services, and deployments.
 
 ## Using K8s in the Real World
+
 1. [**Scaling with HPAs**](content/using_k8s/scaling_with_hpas.md)
    - Learn about Horizontal Pod Autoscalers (HPAs) and how they help in scaling applications dynamically.
 
 ## Reference
+
 1. [**Lexicon**](content/reference/K8s_Lexicon.md)
    - A glossary of terms and concepts related to Kubernetes and cloud-native infrastructure.
 
@@ -84,4 +87,3 @@ This repository uses GitHub Actions for Continuous Integration (CI) to ensure co
    - Ensures that documentation does not contain broken links.
 
 The CI configuration can be found in the `.github/workflows/Doc-ci.yaml` file.
-
