@@ -1,0 +1,38 @@
+name: Convert Markdown to PDF
+
+on:
+  push:
+    paths:
+      - 'blogs/**/*.md'
+  workflow_dispatch:
+    
+
+jobs:
+  convert:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Set up Python
+        uses: actions/setup-python@v2
+        with:
+          python-version: '3.x'
+
+      - name: Install dependencies
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y pandoc texlive-xetex
+
+      - name: Convert Markdown to PDF
+        run: |
+          for file in blogs/**/*.md; do
+            pandoc "$file" -o "${file%.md}.pdf"
+          done
+
+      - name: Upload PDFs
+        uses: actions/upload-artifact@v2
+        with:
+          name: pdfs
+          path: blogs/**/*.pdf
