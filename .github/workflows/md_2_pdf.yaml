@@ -27,13 +27,26 @@ jobs:
 
       - name: Convert Markdown to PDF
         run: |
-          cd blogs/ 
+          cd blogs
           for file in *.md; do
             pandoc "$file" -o "${file%.md}.pdf"
           done
 
-      - name: Upload PDFs
-        uses: actions/upload-artifact@v4
+      - name: Create or Update Release
+        id: create_release
+        uses: actions/create-release@v1
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
-          name: pdfs
-          path: blogs/*.pdf
+          tag_name: 'latest' # Use a consistent tag name to update the same release
+          release_name: 'Latest PDFs'
+          draft: false
+          prerelease: false
+
+      - name: Upload PDFs to Release
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          for file in blogs/*.pdf; do
+            gh release upload latest "$file" --clobber
+          done
