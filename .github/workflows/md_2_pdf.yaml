@@ -27,7 +27,8 @@ jobs:
 
       - name: Convert Markdown to PDF
         run: |
-          for file in blogs/**/*.md; do
+          cd blogs/ 
+          for file in *.md; do
             pandoc "$file" -o "${file%.md}.pdf"
           done
 
@@ -35,4 +36,4 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: pdfs
-          path: blogs/**/*.pdf
+          path: blogs/*.pdf
